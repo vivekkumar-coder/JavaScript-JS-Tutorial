@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercise</title>
+</head>
+
+<body>
+  <script>
+    const hour = 10;
+    const name = 'name';
+    if (hour >= 0 && hour <= 23) {
+      if (hour >= 6 && hour <= 12) {
+        console.log(`Good morning! ${name}`);
+      } else if (hour >= 13 && hour <= 17) {
+        console.log('Good night!');
+      }
+    }
+
+
+    const age = 11;
+    const isHoliday = true;
+    if (age >= 6 && age < 65) {
+      console.log('No discount');
+    }
+    else if (!isHoliday) {
+      console.log('Discount');
+    }
+
+
+    const randNumber = Math.random();
+    let result = '';
+    if (randNumber < 0.5) {
+      result = 'head';
+    } else {
+      result = 'tail';
+    }
+
+    if (result == 'head') {
+      console.log('You Win.');
+    } else {
+      console.log('You lose.');
+    }
+    alert(`Result : ${result}`);
+
+    const result2 = result == 'head' ? 'You win.' : 'You lose.';
+    console.log(result2);
+  </script>
+</body>
+
+</html>
