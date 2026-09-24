@@ -64,7 +64,66 @@
 </body>
 
 <script>
-  alert('Welcome!');
+  // alert('Welcome!');
+
+  function greet(name) {
+    console.log(`Greet ${name}`);
+  }
+
+
+  greet('name');
+  greet('Simon');
+  greet('Hi there');
+
+  function converToFahrenheit(celsius) {
+    const fahrenheit = (celsius * 9 / 5) + 32;
+    return fahrenheit;
+  }
+
+  function convertToCelcius(fahrenheit) {
+    const celcius = (fahrenheit - 32) * 5 / 9;
+    return celcius;
+  }
+
+  function convertTemperatire(degrees, unit) {
+    if (unit === 'F') {
+      return `${converToFahrenheit(degrees)}C`;
+    } else if (unit === 'C') {
+      return `${convertToCelcius(degrees)}F`;
+    }
+  }
+
+  function convertLength(length, from, to) {
+    if (to === 'ft') {
+      if (from === 'miles') {
+        return `${length * 5280} ft`;
+      } else if (from === 'km') {
+        return `${length * 3281} ft`;
+      } else {
+        return `Invalid: ${from}`;
+      }
+
+    } else if (from === 'miles') {
+      return `${1.6 * length} km`;
+    } else if (from === 'km') {
+      return `${length / 1.6} miles`;
+    } else {
+      return `Invalid: ${to}`;
+    }
+  }
+
+
+  console.log(converToFahrenheit(25));
+  console.log(convertToCelcius(86));
+
+  console.log(convertTemperatire(86, 'F'));
+  console.log(convertTemperatire(30, 'C'));
+
+  console.log(convertLength(10, 'miles', 'km'));
+  console.log(convertLength(16, 'km', 'miles'));
+  console.log(convertLength(10, 'miles', 'ft'));
+  console.log(convertLength(16, 'km', 'ft'));
+
 </script>
 
 </html>
