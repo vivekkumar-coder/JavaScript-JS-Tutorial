@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercise 08</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <script>
+    product1 = {
+      product: 'basketball',
+      price: 2095,
+      'delivery-time': '3 days'
+    };
+
+    product1.price = product1.price + 500;
+
+    product2 = {
+      product: 'basketball',
+      price: 6095,
+      'delivery-time': '3 days'
+    };
+
+
+    function comparePrice(product1, product2) {
+      if (product1.price > product2.price) {
+        return product2;
+      } else {
+        return product1;
+      }
+    };
+
+    function isSameProduct(product1, product2) {
+      if (product1 === product2) {
+        return ture;
+      } else {
+        return false;
+      }
+    }
+
+    console.log(product1);
+    console.log(product2);
+    console.log(comparePrice(product1, product2));
+
+    console.log('Good Morning'.toLowerCase());
+
+    console.log('test'.repeat(2));
+  </script>
+</body>
+
+</html>
